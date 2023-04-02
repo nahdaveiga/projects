@@ -8,7 +8,7 @@ I started my data carrer as a Data Anlyst, using Excel and Power BI. After that,
 # What I love
 * I love business challenges
 * I love using data to facilitate the decision process
-* I love knowledge and learn new things everyday
-* I love playing a game with my friends sometimes
-* I love reading
+* I love knowledge and learning new things everyday
+* I love to play a game with my friends sometimes
+* I love to read
 * I love my family
