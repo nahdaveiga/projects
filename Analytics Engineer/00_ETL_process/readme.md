@@ -18,7 +18,7 @@ Therefore, the last step is to send the transformed data to a datalake. In this 
 
 ## Passo 01: Coleta de dados na fonte / Step 01: Data collection at the source
 
-\`\`\`python
+```python
 import requests
 import pandas as pd
 import io
@@ -57,27 +57,28 @@ except requests.exceptions.RequestException as e:
 except ValueError as e:
     print(f"Erro ao processar os dados da tabela: {e}")  # Error processing table data
 
-# Verificando o tamanho do dataset e o tipo de dado / Checking dataset size and data types
+
+#### Verificando o tamanho do dataset e o tipo de dado / Checking dataset size and data types
 df.info()
-\`\`\`
+```
 
 ## Passo 02: Transformação e padronização do dataset / Step 02: Transformation and standardization of the dataset
 
-### PT-BR
+[PT-BR]
 Iremos realizar 3 transformações na base de dados:
 
 1. Mudaremos o nome da tabela de data de "Unnamed:0" para "Data"
 2. Renomearemos as colunas para um padrão mais adequado para leituras em banco de dados
 3. Ajustaremos os tipos de dados para os adequados.
 
-### EN
+[EN]
 We will perform 3 transformations in the database:
 
 1. We will rename the date table from "Unnamed:0" to "Date"
 2. We will rename the columns to a pattern more suitable for database readings
 3. We will adjust the data types to the appropriate ones.
 
-\`\`\`python
+```python
 def transformation(df):
     # 1. Renomear a coluna "Unnamed: 0" para "Data" / Rename column "Unnamed: 0" to "data"
     df = df.rename(columns={'Unnamed: 0': 'data'})
@@ -97,23 +98,23 @@ def transformation(df):
 
     return df
 
-# Aplicando as transformações / Applying the transformations
+### Aplicando as transformações / Applying the transformations
 df_transformed = transformation(df)
 
 df_transformed.head()
 
 df_transformed.info()
-\`\`\`
+```
 
 ## Passo 03: Enviar os dados para um banco de dados / Step 03: Send the data to a database
 
-### PT-BR
+[PT-BR]
 Neste caso, iremos enviar para um datalake no Google Big Query.
 
-### EN
+[EN]
 In this case, we will send it to a datalake in Google Big Query.
 
-\`\`\`python
+```python
 import pandas_gbq
 from google.oauth2 import service_account
 
@@ -153,12 +154,12 @@ project_id = os.getenv('PROJECT_ID')
 
 # Chamada da função para realizar o upload / Function call to perform the upload
 upload_to_bigquery(df_transformed, table_id, project_id, credentials_info)
-\`\`\`
+```
 
 ## Próximos passos / Next Steps
 
-### PT-BR
+[PT-BR]
 O próximo passo deste projeto é construir a visualização dos dados. Iremos realizar este processo no Power BI. Lá, conectaremos no Google Big Query, acessaremos a tabela e criaremos um dashboard com as análises.
 
-### EN
+[EN]
 The next step of this project is to build the data visualization. We will carry out this process in Power BI. There, we will connect to Google Big Query, access the table and create a dashboard with the analyses.
