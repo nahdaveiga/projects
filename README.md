@@ -21,16 +21,8 @@ Each project is organized in its own directory, containing all necessary files f
 
 Feel free to explore the projects to understand the breadth and depth of my skills in Data Science and Analytics Engineering. Each project aims to solve real-world problems and provide practical insights.
 
-### How to Contribute
-
-Contributions are welcome! If you have an interesting project to share or suggestions for improving existing projects, please feel free to open a pull request. Before contributing, please read our [CONTRIBUTING.md](./CONTRIBUTING.md) to understand the contribution guidelines.
-
-### License
-
-This repository is licensed under the MIT License. For more details, read the [LICENSE](./LICENSE).
-
 ### Contact
 
-If you have any questions or suggestions, don't hesitate to get in touch. You can open an issue here on GitHub or connect with me on [LinkedIn](https://www.linkedin.com/).
+If you have any questions or suggestions, don't hesitate to get in touch. You can open an issue here on GitHub or connect with me on [LinkedIn]([https://www.linkedin.com/](https://www.linkedin.com/in/natablum2018/)).
 
 Thank you for visiting and exploring this repository! I hope the projects here inspire and assist you in your own Data Science and Analytics Engineering journey.
